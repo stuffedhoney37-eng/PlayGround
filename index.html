@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbital Forge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div class="panel panel-left">
+        <div class="brand-row">
+          <div class="logo"></div>
+          <div>
+            <h1>Orbital Forge</h1>
+            <div class="subtitle">Frontier engineering sim</div>
+          </div>
+        </div>
+
+        <div class="objective-box">
+          <div class="label">Current mission</div>
+          <div id="objective">Restore the outpost by delivering ore and constructing the orbital support grid.</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <label>Ore</label>
+            <strong id="oreStat">0</strong>
+          </div>
+          <div class="stat">
+            <label>Fuel</label>
+            <strong id="fuelStat">100%</strong>
+          </div>
+          <div class="stat">
+            <label>Hull</label>
+            <strong id="hullStat">100%</strong>
+          </div>
+          <div class="stat">
+            <label>Power</label>
+            <strong id="powerStat">0</strong>
+          </div>
+        </div>
+
+        <div class="meters">
+          <div class="meter-wrap">
+            <span>Hull</span>
+            <div class="meter"><div id="hullBar" class="fill hull"></div></div>
+          </div>
+          <div class="meter-wrap">
+            <span>Fuel</span>
+            <div class="meter"><div id="fuelBar" class="fill fuel"></div></div>
+          </div>
+          <div class="meter-wrap">
+            <span>Station power</span>
+            <div class="meter"><div id="powerBar" class="fill power"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-right">
+        <div class="label">Build palette</div>
+        <div id="buildButtons">
+          <button class="build-btn active" data-type="solar">Solar</button>
+          <button class="build-btn" data-type="reactor">Reactor</button>
+          <button class="build-btn" data-type="thruster">Thruster</button>
+          <button class="build-btn" data-type="storage">Vault</button>
+        </div>
+        <div class="tips">
+          <div>WASD - fly</div>
+          <div>Shift - boost</div>
+          <div>E - mine ore</div>
+          <div>R - collect fuel cells</div>
+          <div>C - deliver to station</div>
+          <div>Click - place structure</div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="toast"></div>
+    <script src="game.js"></script>
+  </body>
+</html>
